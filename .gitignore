@@ -4,8 +4,6 @@
 config.php
 data/
 workspace/
-plugins/*
-!plugins/README.md
 themes/*
 !themes/default/
 !themes/README.md
