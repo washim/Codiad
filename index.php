@@ -26,7 +26,7 @@ if(isset($_SESSION['theme'])) {
 
 <head>
     <meta charset="utf-8">
-    <title><?php i18n("CODIAD"); ?></title>
+    <title>Online IDE | Phplake.com</title>
     <?php
     // Load System CSS Files
     $stylesheets = array("jquery.toastmessage.css","reset.css","fonts.css","screen.css");
@@ -376,7 +376,7 @@ if(isset($_SESSION['theme'])) {
                             }
                         }
                     } else{
-                        if(!$data['admin'] || $data['admin'] && checkAccess()) {
+                        if(!$data['admin'] || $data['admin'] && checkAccess() && $data['title'] != 'Marketplace') {
                             echo('<a onclick="'.$data['onclick'].'"><span class="'.$data['icon'].' bigger-icon"></span>'.get_i18n($data['title']).'</a>');
                         }
                     }
