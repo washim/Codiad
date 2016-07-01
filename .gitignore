@@ -1,7 +1,7 @@
 *~
 *\#
 *.swp
-config.php
+/config.php
 data/
 workspace/
 themes/*
