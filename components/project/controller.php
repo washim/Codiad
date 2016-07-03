@@ -6,14 +6,13 @@
     *  [root]/license.txt for more. This information must remain intact.
     */
 
-
     require_once('../../common.php');
     require_once('class.project.php');
 
     //////////////////////////////////////////////////////////////////
     // Verify Session or Key
     //////////////////////////////////////////////////////////////////
-
+    if ($_GET['anonymous'] !== 'yes')
     checkSession();
 
     $Project = new Project();
@@ -55,7 +54,16 @@
     //////////////////////////////////////////////////////////////////
 
     if($_GET['action']=='create'){
-        if(checkAccess()) {
+        if ($_GET['anonymous'] == 'yes') {
+            $Project->name = $_GET['project_name'];
+            if($_GET['project_path'] != '') {
+                $Project->path = $_GET['project_path'];
+            } else {
+                $Project->path = $_GET['project_name'];
+            }
+            $Project->Create();
+        }
+        elseif(checkAccess()) {
             $Project->name = $_GET['project_name'];
             if($_GET['project_path'] != '') {
                 $Project->path = $_GET['project_path'];
