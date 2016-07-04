@@ -239,7 +239,7 @@ class Project extends Common {
     function cleanPath(){
 
         // prevent Poison Null Byte injections
-        $path = str_replace(chr(0), '', $this->path );
+        //$path = str_replace(chr(0), '', $this->path );
 
         // prevent go out of the workspace
         while (strpos($path , '../') !== false)
