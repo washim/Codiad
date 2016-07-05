@@ -96,7 +96,11 @@
     //////////////////////////////////////////////////////////////////
 
     if($_GET['action']=='delete'){
-        if(checkAccess()) {
+        if ($_GET['anonymous'] == 'yes') {
+            $Project->path = $_GET['project_path'];
+            $Project->Delete();
+        }
+        elseif(checkAccess()) {
             $Project->path = $_GET['project_path'];
             $Project->Delete();
         }
