@@ -42,24 +42,6 @@
         "onclick": "codiad.user.list();"
     },
     {
-        "title": "System",
-        "admin": true,
-        "icon": null,
-        "onclick": null
-    },
-    {
-        "title": "Marketplace",
-        "admin": true,
-        "icon": "icon-cloud",
-        "onclick": "codiad.market.list();"
-    },
-    {
-        "title": "Update Check",
-        "admin": true,
-        "icon": "icon-share",
-        "onclick": "codiad.update.check();"
-    },
-    {
         "title": "Account",
         "admin": false,
         "icon": null,
@@ -70,12 +52,6 @@
         "admin": false,
         "icon": "icon-doc-text",
         "onclick": "codiad.settings.show();"
-    },
-    {
-        "title": "Password",
-        "admin": false,
-        "icon": "icon-flashlight",
-        "onclick": "codiad.user.password();"
     },
     {
         "title": "break",

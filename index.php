@@ -376,7 +376,7 @@ if(isset($_SESSION['theme'])) {
                             }
                         }
                     } else{
-                        if(!$data['admin'] || $data['admin'] && checkAccess() && $data['title'] != 'Marketplace') {
+                        if(!$data['admin'] || $data['admin'] && checkAccess()) {
                             echo('<a onclick="'.$data['onclick'].'"><span class="'.$data['icon'].' bigger-icon"></span>'.get_i18n($data['title']).'</a>');
                         }
                     }
