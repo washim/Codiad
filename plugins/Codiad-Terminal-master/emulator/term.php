@@ -180,13 +180,7 @@
         //////////////////////////////////////////////////////////////
         // Authentication
         //////////////////////////////////////////////////////////////
-        
-        if($command==PASSWORD){
-            $_SESSION['term_auth'] = 'true';
-            $output = '[AUTHENTICATED]';
-        }else{
-            $output = 'Enter Password:';
-        }
+        $_SESSION['term_auth'] = 'true';
         
     }else{
     
