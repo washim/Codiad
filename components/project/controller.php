@@ -12,7 +12,6 @@
     //////////////////////////////////////////////////////////////////
     // Verify Session or Key
     //////////////////////////////////////////////////////////////////
-    if ($_GET['anonymous'] !== 'yes')
     checkSession();
 
     $Project = new Project();
@@ -54,16 +53,7 @@
     //////////////////////////////////////////////////////////////////
 
     if($_GET['action']=='create'){
-        if ($_GET['anonymous'] == 'yes') {
-            $Project->name = $_GET['project_name'];
-            if($_GET['project_path'] != '') {
-                $Project->path = $_GET['project_path'];
-            } else {
-                $Project->path = $_GET['project_name'];
-            }
-            $Project->Create();
-        }
-        elseif(checkAccess()) {
+        if(checkAccess()) {
             $Project->name = $_GET['project_name'];
             if($_GET['project_path'] != '') {
                 $Project->path = $_GET['project_path'];
@@ -96,11 +86,7 @@
     //////////////////////////////////////////////////////////////////
 
     if($_GET['action']=='delete'){
-        if ($_GET['anonymous'] == 'yes') {
-            $Project->path = $_GET['project_path'];
-            $Project->Delete();
-        }
-        elseif(checkAccess()) {
+        if(checkAccess()) {
             $Project->path = $_GET['project_path'];
             $Project->Delete();
         }

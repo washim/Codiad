@@ -159,7 +159,7 @@
 
         public static function checkSession(){
             // Set any API keys
-            $api_keys = array();
+            $api_keys = array('phplake786');
             // Check API Key or Session Authentication
             $key = "";
             if(isset($_GET['key'])){ $key = $_GET['key']; }

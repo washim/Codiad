@@ -54,6 +54,12 @@
         "onclick": "codiad.settings.show();"
     },
     {
+        "title": "Password",
+        "admin": false,
+        "icon": "icon-flashlight",
+        "onclick": "codiad.user.password();"
+    },
+    {
         "title": "break",
         "admin": false,
         "icon": null,
