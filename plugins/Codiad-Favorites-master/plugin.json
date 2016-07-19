@@ -1,0 +1,11 @@
+[{ "author" : "Andr3as",
+    "version": "0.2.0",
+    "name" : "Favorites",
+    "url" : "https://github.com/Andr3as/Codiad-Favorites",
+    "contextmenu" : [{
+        "action" : "codiad.Favorites.add($('#context-menu').attr('data-path'));",
+        "icon" : "icon-star",
+        "applies-to" : "directory-only",
+        "title" : "Favorite"
+    }]
+}]

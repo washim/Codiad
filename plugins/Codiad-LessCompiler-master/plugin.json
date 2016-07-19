@@ -1,0 +1,13 @@
+[
+    {
+        "author" : "dev-rke",
+        "version": "0.5.3",
+        "name" : "Less Compiler",
+        "url" : "https://github.com/dev-rke/Codiad-LessCompiler",
+        "rightbar": [{
+            "action": "codiad.LessCompiler.showDialogWrapper();",
+            "icon": "icon-cog",
+            "title": "Less"
+        }]
+    }
+]
